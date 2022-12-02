@@ -1,6 +1,7 @@
 use std::env;
 use std::time;
 mod day1;
+mod day2;
 mod utils;
 
 //With thanks to CJP for the logic behind this framework.
@@ -8,7 +9,7 @@ mod utils;
 //But it's basically identical :-(
 //
 //I'm not copying anyone's solutions though!
-static DAYS: [fn() -> (usize, usize); 1] = [day1::day1];
+static DAYS: [fn() -> (usize, usize); 2] = [day1::day1, day2::day2];
 
 fn main() {
     let mut min_day: usize = 1;
