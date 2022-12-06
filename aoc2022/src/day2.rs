@@ -2,7 +2,7 @@ use crate::utils;
 
 ///Day 1 solution
 pub fn day2() -> (usize, usize) {
-    let input: Vec<Vec<String>> = utils::parse_input_space_sep_strings("input/day2.txt");
+    let input: Vec<Vec<String>> = utils::parse_input_sep_strings("input/day2.txt", ' ');
     calculate_score(&input)
 }
 

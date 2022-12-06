@@ -45,13 +45,14 @@ pub fn parse_input_chars(input_file: &str) -> Vec<Vec<char>> {
         .collect::<Vec<Vec<char>>>()
 }
 
-/// As for parse_input_chars, but characters on each line are space-separated.
-pub fn parse_input_space_sep_strings(input_file: &str) -> Vec<Vec<String>> {
+/// Each line is a <separator>-separated list of strings, parse this into a Vec of Vec of strings - top-level vec
+/// is split by newlines, inner vec split by separator character.
+pub fn parse_input_sep_strings(input_file: &str, separator: char) -> Vec<Vec<String>> {
     let input = fs::read_to_string(input_file).expect("Oh dear, couldn't read file!");
     let mut vector: Vec<String> = input.lines().map(|line| line.to_string()).collect();
     vector
         .iter_mut()
-        .map(|x: &mut String| x.split(' ').map(|y: &str| y.to_string()).collect())
+        .map(|x: &mut String| x.split(separator).map(|y: &str| y.to_string()).collect())
         .collect::<Vec<Vec<String>>>()
 }
 
