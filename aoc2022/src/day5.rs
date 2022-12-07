@@ -1,5 +1,5 @@
 use regex::Regex;
-use std::{num, usize};
+use std::usize;
 
 use crate::utils;
 
