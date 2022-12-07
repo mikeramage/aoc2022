@@ -36,6 +36,6 @@ fn check_for_containment(ranges: &[usize]) -> bool {
 /// Takes a vector (lower_1, upper_1, lower_2, upper_2). Returns true if one of the ranges lower_i -> upper_i overlaps in some way with the other.  
 fn check_for_overlap(ranges: &[usize]) -> bool {
     (ranges[0] >= ranges[2] && ranges[0] <= ranges[3])
-        || (ranges[1] >= ranges[2] && ranges[1] <= ranges[3]) 
-            || check_for_containment(ranges)
+        || (ranges[1] >= ranges[2] && ranges[1] <= ranges[3])
+        || check_for_containment(ranges)
 }

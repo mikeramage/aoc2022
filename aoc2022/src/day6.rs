@@ -1,15 +1,8 @@
-use std::{usize, num};
-use std::fs;
 use itertools::Itertools;
+use std::fs;
+use std::{num, usize};
 
 use crate::utils;
-
-#[derive(Debug)]
-struct Instruction {
-    num_crates: usize,
-    old_stack: usize,
-    new_stack: usize,
-}
 
 ///Day 6 solution
 pub fn day6() -> (usize, usize) {
@@ -27,7 +20,7 @@ pub fn day6() -> (usize, usize) {
     }
 
     part1 = chars_processed;
-    
+
     chars_processed = 14;
     for fourteen_char_window in input.as_bytes().windows(14) {
         if fourteen_char_window.into_iter().unique().count() == 14 {
@@ -36,9 +29,8 @@ pub fn day6() -> (usize, usize) {
         }
         chars_processed += 1;
     }
-    
+
     part2 = chars_processed;
 
     (part1, part2)
 }
-
