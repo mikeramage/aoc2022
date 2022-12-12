@@ -17,4 +17,3 @@ fn get_message_start(input: &String, num_unique_chars: usize) -> usize {
         .unwrap()
         + num_unique_chars
 }
-
