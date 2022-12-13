@@ -28,3 +28,6 @@ And I thought day 7 was a poor showing. This is like someone fumbling around lea
 
 ## Day 9
 Not bad I suppose. Quite methodical. I'm sure there's a way to do this in 3 lines, though. Took me about 100.
+
+## Day 10
+RKAZAJBR - that's what I shouted at the compiler. 
