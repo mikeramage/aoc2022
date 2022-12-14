@@ -287,17 +287,16 @@ pub fn day11() -> (usize, usize) {
     }
 
     // Part 2
+    let prime_factor_product = monkeys
+        .values()
+        .map(|x| x.test_divisibility_factor)
+        .product();
     for round in 0..num_rounds2 {
         for ii in 0..monkeys2.len() {
             let mut monkey = monkeys2.remove(&ii).unwrap();
             while monkey.got_items() {
                 monkey.inspect_item();
-                monkey.get_bored(
-                    monkeys
-                        .values()
-                        .map(|x| x.test_divisibility_factor)
-                        .product(),
-                );
+                monkey.get_bored(prime_factor_product);
                 monkey.test_item(&mut monkeys2);
             }
             monkeys2.insert(ii, monkey);
